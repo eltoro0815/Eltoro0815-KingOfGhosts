@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/EviePatamon-Patamods/content/weapons/midas_scepter/4/midas_scepter_4_stats.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/EviePatamon-Patamods/content/weapons/midas_scepter/4/midas_scepter_4_effect.tres" type="Resource" id=3]
+[ext_resource path="res://items/sets/support/support_set_data.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/EviePatamon-Patamods/content/weapons/midas_scepter/patamods_midas_scepter_icon.png" type="Texture" id=5]
+[ext_resource path="res://items/sets/medieval/medieval_set_data.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/EviePatamon-Patamods/content/weapons/midas_scepter/midas_scepter.tscn" type="PackedScene" id=7]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "weapon_midas_scepter_4"
+unlocked_by_default = false
+icon = ExtResource( 5 )
+name = "WEAPON_MIDAS_SCEPTER"
+tier = 3
+value = 190
+effects = [ ExtResource( 3 ) ]
+tracking_text = "MATERIALS_GAINED"
+weapon_id = "weapon_midas_scepter"
+type = 0
+sets = [ ExtResource( 6 ), ExtResource( 4 ) ]
+scene = ExtResource( 7 )
+stats = ExtResource( 2 )

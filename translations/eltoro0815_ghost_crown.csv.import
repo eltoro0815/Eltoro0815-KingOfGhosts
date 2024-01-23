@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://mods-unpacked/Eltoro0815-KingOfGhosts/translations/eltoro0815_ghost_crown.en.translation", "res://mods-unpacked/Eltoro0815-KingOfGhosts/translations/eltoro0815_ghost_crown.de.translation" ]
+
+source_file="res://mods-unpacked/Eltoro0815-KingOfGhosts/translations/eltoro0815_ghost_crown.csv"
+dest_files=[ "res://mods-unpacked/Eltoro0815-KingOfGhosts/translations/eltoro0815_ghost_crown.en.translation", "res://mods-unpacked/Eltoro0815-KingOfGhosts/translations/eltoro0815_ghost_crown.de.translation" ]
+
+[params]
+
+compress=true
+delimiter=0

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://items/global/item_data.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_crown/ghost_crown_appearance.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_crown/ghost_crown_icon.png" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_crown/ghost_crown_effect_1.tres" type="Resource" id=4]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "item_ghost_crown"
+unlocked_by_default = true
+icon = ExtResource( 3 )
+name = "GHOST_CROWN_NAME"
+tier = 2
+value = 70
+effects = [ ExtResource( 4 ) ]
+tracking_text = "STATS_GAINED"
+max_nb = 1
+item_appearances = [ ExtResource( 2 ) ]
+tags = [ "stat_percent_damage" ]

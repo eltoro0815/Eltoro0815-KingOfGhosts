@@ -1,0 +1,27 @@
+{
+	"name": "KingOfGhosts",
+	"namespace": "Eltoro0815",
+	"version_number": "1.0.1",
+	"description": "Item to gain faster stats with weapons by killing enemies.",
+	"website_url": "",
+	"dependencies": [
+		"Darkly77-ContentLoader"
+	],
+	"extra": {
+		"godot": {
+			"incompatibilities": [],
+			"authors": [
+				"Eltoro0815"
+			],
+			"compatible_mod_loader_version": ["6.0.0"],
+			"compatible_game_version": ["1.0.0.3"],
+			"config_schema": {
+				"title":"KingOfGhosts Settings",
+				"description":"Settings for KingOfGhosts mod by Eltoro0815",
+				"type": "object",
+				"properties": {
+				}
+			}
+		}
+	}
+}
