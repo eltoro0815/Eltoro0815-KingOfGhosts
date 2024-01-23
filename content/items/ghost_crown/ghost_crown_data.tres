@@ -2,7 +2,7 @@
 
 [ext_resource path="res://items/global/item_data.gd" type="Script" id=1]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_crown/ghost_crown_appearance.tres" type="Resource" id=2]
-[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_crown/ghost_crown_icon.png" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_crown/eltoro0815_ghost_crown_icon.png" type="Texture" id=3]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_crown/ghost_crown_effect_1.tres" type="Resource" id=4]
 
 [resource]

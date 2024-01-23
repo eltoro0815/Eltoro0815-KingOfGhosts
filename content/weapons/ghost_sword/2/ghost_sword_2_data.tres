@@ -1,25 +1,25 @@
 [gd_resource type="Resource" load_steps=9 format=2]
 
 [ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
-[ext_resource path="res://mods-unpacked/EviePatamon-Patamods/content/weapons/midas_scepter/2/midas_scepter_2_stats.tres" type="Resource" id=2]
-[ext_resource path="res://mods-unpacked/EviePatamon-Patamods/content/weapons/midas_scepter/3/midas_scepter_3_data.tres" type="Resource" id=3]
-[ext_resource path="res://mods-unpacked/EviePatamon-Patamods/content/weapons/midas_scepter/2/midas_scepter_2_effect.tres" type="Resource" id=4]
-[ext_resource path="res://mods-unpacked/EviePatamon-Patamods/content/weapons/midas_scepter/patamods_midas_scepter_icon.png" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/2/ghost_sword_2_stats.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/3/ghost_sword_3_stats.tres" type="Resource" id=3]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/2/ghost_sword_2_effect.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/eltoro0815_ghost_sword_icon.png" type="Texture" id=5]
 [ext_resource path="res://items/sets/support/support_set_data.tres" type="Resource" id=6]
 [ext_resource path="res://items/sets/medieval/medieval_set_data.tres" type="Resource" id=7]
-[ext_resource path="res://mods-unpacked/EviePatamon-Patamods/content/weapons/midas_scepter/midas_scepter.tscn" type="PackedScene" id=8]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/ghost_sword.tscn" type="PackedScene" id=8]
 
 [resource]
 script = ExtResource( 1 )
-my_id = "weapon_midas_scepter_2"
-unlocked_by_default = false
+my_id = "weapon_ghost_crown_2"
+unlocked_by_default = true
 icon = ExtResource( 5 )
-name = "WEAPON_MIDAS_SCEPTER"
+name = "WEAPON_GHOST_SWORD"
 tier = 1
 value = 51
 effects = [ ExtResource( 4 ) ]
 tracking_text = "MATERIALS_GAINED"
-weapon_id = "weapon_midas_scepter"
+weapon_id = "weapon_ghost_sword"
 type = 0
 sets = [ ExtResource( 7 ), ExtResource( 6 ) ]
 scene = ExtResource( 8 )

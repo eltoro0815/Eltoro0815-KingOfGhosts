@@ -34,7 +34,7 @@ func _ready():
 	ModLoaderLog.info("Done", LOG_NAME)
 
 	var ContentLoader = get_node("/root/ModLoader/Darkly77-ContentLoader/ContentLoader")
-
+	
 	ContentLoader.load_data(dir + "content_data/king_of_ghosts_items.tres", LOG_NAME)
 
 	#var mod_loader_mod = ModLoaderMod.new()
