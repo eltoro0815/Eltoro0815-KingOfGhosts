@@ -1,6 +1,6 @@
 keys,en,de
 EFFECT_GHOST_CROWN,You need 2 less enemies killed to gain a stat with a weapon like the Ghost Axe.,Es werden 2 getöte Gegner weniger benötigt um bspw. 1% Schaden mit der Geisteraxt zu bekommen.
-GHOST_CROWN_NAME,King of Ghosts Crown,Krone des Geisterkönigs
+GHOST_CROWN_NAME,King of Ghosts' Crown,Krone des Geisterkönigs
 EFFECT_GHOST_CAPE,Gain +2 per stat instead of +1 with an item like the Ghost Axe., Erhalte +2 Werte mit Waffen wie der Geisteraxt statt +1.
-GHOST_CAPE_NAME,King of Ghosts Cape,Umhang des Geisterkönigs
-WEAPON_GHOST_SWORD,Ghost Sword,Geisterschwert
+GHOST_CAPE_NAME,King of Ghosts' Cape,Umhang des Geisterkönigs
+WEAPON_GHOST_SWORD,King of Ghosts' Sword,Schwert des Geisterkönigs

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/2/ghost_sword_2_stats.tres" type="Resource" id=2]
-[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/3/ghost_sword_3_stats.tres" type="Resource" id=3]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/3/ghost_sword_3_data.tres" type="Resource" id=3]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/2/ghost_sword_2_effect.tres" type="Resource" id=4]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/eltoro0815_ghost_sword_icon.png" type="Texture" id=5]
 [ext_resource path="res://items/sets/support/support_set_data.tres" type="Resource" id=6]
