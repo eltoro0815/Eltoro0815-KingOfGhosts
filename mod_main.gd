@@ -23,7 +23,7 @@ func _init(_modLoader = ModLoader):
 	ModLoaderMod.add_translation(trans_dir + "eltoro0815_ghost_crown.en.translation")
 	ModLoaderMod.add_translation(trans_dir + "eltoro0815_ghost_crown.de.translation")
 	#ModLoaderMod.add_translation(trans_dir + "beelze_stuff.uk.translation")
-	#ModLoaderMod.install_script_extension(ext_dir + "singletons/progress_data.gd")
+	ModLoaderMod.install_script_extension(ext_dir + "singletons/progress_data.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "singletons/run_data.gd")
 	#ModLoaderMod.install_script_extension(ext_dir + "singletons/utils.gd")
 	#ModLoaderMod.install_script_extension(ext_dir + "main.gd")
