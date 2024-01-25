@@ -1,12 +1,11 @@
-[gd_resource type="Resource" load_steps=9 format=2]
+[gd_resource type="Resource" load_steps=8 format=2]
 
 [ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
-[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/1/ghost_sword_1_stats.tres" type="Resource" id=2]
+[ext_resource path="res://items/sets/ethereal/ethereal_set_data.tres" type="Resource" id=2]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/2/ghost_sword_2_data.tres" type="Resource" id=3]
-[ext_resource path="res://items/sets/support/support_set_data.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/1/ghost_sword_1_stats.tres" type="Resource" id=4]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/ghost_sword.tscn" type="PackedScene" id=5]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/eltoro0815_ghost_sword_icon.png" type="Texture" id=6]
-[ext_resource path="res://items/sets/medieval/medieval_set_data.tres" type="Resource" id=7]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/1/ghost_sword_1_effect.tres" type="Resource" id=8]
 
 [resource]
@@ -18,10 +17,10 @@ name = "WEAPON_GHOST_SWORD"
 tier = 0
 value = 24
 effects = [ ExtResource( 8 ) ]
-tracking_text = "MATERIALS_GAINED"
+tracking_text = "stats_gained"
 weapon_id = "weapon_ghost_sword"
 type = 0
-sets = [ ExtResource( 7 ), ExtResource( 4 ) ]
+sets = [ ExtResource( 2 ) ]
 scene = ExtResource( 5 )
-stats = ExtResource( 2 )
+stats = ExtResource( 4 )
 upgrades_into = ExtResource( 3 )
