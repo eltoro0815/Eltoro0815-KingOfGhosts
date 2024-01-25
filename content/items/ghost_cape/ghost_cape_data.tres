@@ -2,7 +2,7 @@
 
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_cape/ghost_cape_appearance.tres" type="Resource" id=1]
 [ext_resource path="res://items/global/item_data.gd" type="Script" id=2]
-[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_cape/eltoro0815_ghost_cape.png" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_cape/eltoro0815_ghost_cape_icon.png" type="Texture" id=3]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_cape/ghost_cape_effect_0.tres" type="Resource" id=4]
 
 [resource]
