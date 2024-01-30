@@ -3,7 +3,7 @@
 [ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/4/ghost_sword_4_stats.tres" type="Resource" id=2]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/4/ghost_sword_4_effect.tres" type="Resource" id=3]
-[ext_resource path="res://items/sets/set_data.gd" type="Script" id=4]
+[ext_resource path="res://items/sets/ethereal/ethereal_set_data.tres" type="Resource" id=4]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/eltoro0815_ghost_sword_icon.png" type="Texture" id=5]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/ghost_sword.tscn" type="PackedScene" id=7]
 
@@ -16,7 +16,7 @@ name = "WEAPON_GHOST_SWORD"
 tier = 3
 value = 190
 effects = [ ExtResource( 3 ) ]
-tracking_text = "MATERIALS_GAINED"
+tracking_text = "stats_gained"
 weapon_id = "weapon_ghost_sword"
 type = 0
 sets = [ ExtResource( 4 ) ]
