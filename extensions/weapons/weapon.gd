@@ -28,7 +28,7 @@ func map_percentage_to_values(percent: float) -> int:
 		index = 3
 	if percent >= 0.7:
 		index = 4
-	if percent >= 0.95:
+	if percent >= 0.9:
 		index = 5
 
 	return index
@@ -54,8 +54,15 @@ func on_killed_something(_thing_killed:Node)->void :
 			if weapon_id == "weapon_ghost_sword" :
 				if effect.custom_key == "ghost_sword_blood":
 					kills_counter += 1
-
-			var effect_value = int(effect.value - ghost_crown_effect)
+			
+			var effect_value = 0
+			
+			if effect.custom_key == "ghost_sword_gain_hp":
+				# double the ghost_crown_effect on HP effect to keep the ratio %damage to maxHP to 1:2
+				effect_value = int(effect.value - (2*ghost_crown_effect))
+			else:
+				effect_value = int(effect.value - ghost_crown_effect)
+			
 
 			if effect_value < 1:
 				effect_value = 1
