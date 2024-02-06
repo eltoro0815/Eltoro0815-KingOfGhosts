@@ -17,4 +17,4 @@ effects = [ ExtResource( 4 ) ]
 tracking_text = "STATS_GAINED"
 max_nb = 1
 item_appearances = [ ExtResource( 2 ) ]
-tags = [ "stat_percent_damage" ]
+tags = [ "tag_ghostking" ]

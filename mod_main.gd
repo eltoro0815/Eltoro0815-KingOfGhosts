@@ -29,9 +29,12 @@ func _init(_modLoader = ModLoader):
 	#ModLoaderMod.install_script_extension(ext_dir + "main.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "weapons/weapon.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "effects/gain_stat_every_killed_enemies_effect.gd")
-
-
-func _ready():
+	
+	var system = Directory.new()
+	if system.dir_exists('res://mods-unpacked/LexLooter-ShowTags'):
+		ModLoaderMod.install_script_extension(ext_dir + "ui/menus/shop/item_description.gd")
+		
+func _ready(_modLoader = ModLoader):
 	ModLoaderLog.info("Done", LOG_NAME)
 
 	var ContentLoader = get_node("/root/ModLoader/Darkly77-ContentLoader/ContentLoader")
@@ -40,3 +43,5 @@ func _ready():
 
 	#var mod_loader_mod = ModLoaderMod.new()
 	#mod_loader_mod.call_deferred("install_script_extension", ext_dir + "global/entity_spawner.gd")
+
+	

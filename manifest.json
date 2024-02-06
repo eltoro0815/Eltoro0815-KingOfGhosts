@@ -6,9 +6,12 @@
 	"website_url": "",
 	"dependencies": [
 		"Darkly77-ContentLoader"
+
 	],
 	"extra": {
 		"godot": {
+			"load_before": [],
+			"optional_dependencies": ["LexLooter-ShowTags"],
 			"incompatibilities": [],
 			"authors": [
 				"Eltoro0815"
