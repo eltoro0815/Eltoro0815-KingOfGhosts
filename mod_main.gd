@@ -30,9 +30,7 @@ func _init(_modLoader = ModLoader):
 	ModLoaderMod.install_script_extension(ext_dir + "weapons/weapon.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "effects/gain_stat_every_killed_enemies_effect.gd")
 	
-	var system = Directory.new()
-	if system.dir_exists('res://mods-unpacked/LexLooter-ShowTags'):
-		ModLoaderMod.install_script_extension(ext_dir + "ui/menus/shop/item_description.gd")
+	ModLoaderMod.install_script_extension(ext_dir + "ui/menus/shop/item_description.gd")
 		
 func _ready(_modLoader = ModLoader):
 	ModLoaderLog.info("Done", LOG_NAME)
