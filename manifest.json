@@ -1,7 +1,7 @@
 {
 	"name": "KingOfGhosts",
 	"namespace": "Eltoro0815",
-	"version_number": "1.1.0",
+	"version_number": "1.2.0",
 	"description": "Items to gain faster stats with weapons by killing enemies. New Ghost Sword.",
 	"website_url": "",
 	"dependencies": [
