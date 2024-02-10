@@ -25,12 +25,14 @@ func _init(_modLoader = ModLoader):
 	#ModLoaderMod.add_translation(trans_dir + "beelze_stuff.uk.translation")
 	#ModLoaderMod.install_script_extension(ext_dir + "singletons/progress_data.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "singletons/run_data.gd")
+	ModLoaderMod.install_script_extension(ext_dir + "singletons/weapon_service.gd")
 	#ModLoaderMod.install_script_extension(ext_dir + "singletons/utils.gd")
 	#ModLoaderMod.install_script_extension(ext_dir + "main.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "weapons/weapon.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "effects/gain_stat_every_killed_enemies_effect.gd")
 	
 	ModLoaderMod.install_script_extension(ext_dir + "ui/menus/shop/item_description.gd")
+	
 		
 func _ready(_modLoader = ModLoader):
 	ModLoaderLog.info("Done", LOG_NAME)

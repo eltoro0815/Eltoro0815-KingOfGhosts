@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/extensions/effects/weapon_item_stack_effect.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+key = "EFFECT_WEAPON_ITEM_STACK"
+text_key = ""
+value = 3
+custom_key = ""
+storage_method = 0
+effect_sign = 3
+custom_args = [  ]
+weapon_item_stacked_name = "item_weird_ghost"
+weapon_item_stacked_id = "item_weird_ghost"
+stat_displayed_name = "stat_damage"
+stat_name = "damage"

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=10 format=2]
+[gd_resource type="Resource" load_steps=11 format=2]
 
 [ext_resource path="res://items/global/weapon_data.gd" type="Script" id=1]
 [ext_resource path="res://items/sets/ethereal/ethereal_set_data.tres" type="Resource" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/1/ghost_sword_1_effect_2.tres" type="Resource" id=7]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/1/ghost_sword_1_effect.tres" type="Resource" id=8]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/1/ghost_sword_1_effect_3.tres" type="Resource" id=9]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/1/ghost_sword_1_effect_4.tres" type="Resource" id=10]
 
 [resource]
 script = ExtResource( 1 )
@@ -18,7 +19,7 @@ icon = ExtResource( 6 )
 name = "WEAPON_GHOST_SWORD"
 tier = 0
 value = 24
-effects = [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ) ]
+effects = [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ) ]
 tracking_text = "stats_gained"
 weapon_id = "weapon_ghost_sword"
 type = 0
