@@ -9,7 +9,7 @@ export (String) var stat_name = "damage"
 
 
 static func get_id()->String:
-	return "weapon_item_stack"
+	return "weapon_item_stack_effect"
 
 
 func get_args()->Array:

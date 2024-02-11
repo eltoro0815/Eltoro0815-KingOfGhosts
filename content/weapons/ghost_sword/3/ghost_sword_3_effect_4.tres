@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource( 1 )
-key = "EFFECT_WEAPON_ITEM_STACK"
-text_key = ""
+key = "weapon_item_stack_effect"
+text_key = "EFFECT_WEAPON_ITEM_STACK"
 value = 4
 custom_key = ""
 storage_method = 0
