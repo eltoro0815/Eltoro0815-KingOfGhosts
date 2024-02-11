@@ -30,18 +30,20 @@ func _init(_modLoader = ModLoader):
 	ModLoaderMod.install_script_extension(ext_dir + "main.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "weapons/weapon.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "effects/gain_stat_every_killed_enemies_effect.gd")
-	
+	#ModLoaderMod.install_script_extension(ext_dir + "effects/descendant_weird_ghost_effect.gd")
+	#ModLoaderMod.install_script_extension(ext_dir + "effects/weapon_item_stack_effect.gd")
+
 	ModLoaderMod.install_script_extension(ext_dir + "ui/menus/shop/item_description.gd")
-	
-		
+
+
 func _ready(_modLoader = ModLoader):
 	ModLoaderLog.info("Done", LOG_NAME)
 
 	var ContentLoader = get_node("/root/ModLoader/Darkly77-ContentLoader/ContentLoader")
-	
+
 	ContentLoader.load_data(dir + "content_data/king_of_ghosts_items.tres", LOG_NAME)
 
 	#var mod_loader_mod = ModLoaderMod.new()
 	#mod_loader_mod.call_deferred("install_script_extension", ext_dir + "global/entity_spawner.gd")
 
-	
+

@@ -8,7 +8,7 @@ func init_base_stats(from_stats:WeaponStats, weapon_id:String = "", sets:Array =
 	var is_exploding = false
 	
 	for effect in effects:
-		if effect is WeaponItemStackEffect:
+		if effect.key == "weapon_item_stack_effect":
 			var nb_num_of_item = 0
 
 			for item in RunData.items:
