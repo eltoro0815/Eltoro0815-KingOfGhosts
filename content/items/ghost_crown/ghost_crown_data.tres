@@ -1,9 +1,10 @@
-[gd_resource type="Resource" load_steps=5 format=2]
+[gd_resource type="Resource" load_steps=6 format=2]
 
 [ext_resource path="res://items/global/item_data.gd" type="Script" id=1]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_crown/ghost_crown_appearance.tres" type="Resource" id=2]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_crown/eltoro0815_ghost_crown_icon.png" type="Texture" id=3]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_crown/ghost_crown_effect_1.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_crown/ghost_crown_effect_2.tres" type="Resource" id=5]
 
 [resource]
 script = ExtResource( 1 )
@@ -13,8 +14,8 @@ icon = ExtResource( 3 )
 name = "GHOST_CROWN_NAME"
 tier = 2
 value = 70
-effects = [ ExtResource( 4 ) ]
-tracking_text = "STATS_GAINED"
+effects = [ ExtResource( 4 ), ExtResource( 5 ) ]
+tracking_text = "MATERIALS_GAINED"
 max_nb = 1
 item_appearances = [ ExtResource( 2 ) ]
-tags = [ "tag_ghostking" ]
+tags = [ "tag_ghostking", "stat_crit_chance" ]
