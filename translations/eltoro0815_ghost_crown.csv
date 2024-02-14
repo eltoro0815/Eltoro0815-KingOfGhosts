@@ -5,5 +5,5 @@ EFFECT_GHOST_CAPE,Gain +2 per stat instead of +1 with an item like the Ghost Axe
 GHOST_CAPE_NAME,King of Ghosts' Cape,Umhang des Geisterkönigs
 WEAPON_GHOST_SWORD,King of Ghosts' Sword,Schwert des Geisterkönigs
 CHARACTER_GHOSTKING_DESC,The King of Ghosts' Descendant,Der Nachfahre des Geisterkönigs
-EFFECT_WEAPON_ITEM_STACK,Deals {0} {1} for every additional {2} you have [{3}],Verursacht {0} {1} für jedes weitere Exemplar von {2} [{3}]
+EFFECT_WEAPON_ITEM_STACK,Deals {0} {1} for every {2} you have [{3}],Verursacht {0} {1} für jedes Exemplar von {2} [{3}]
 DESCENDANT_WEIRD_GHOST_EFFECT,Change of Weird Ghost: Instead of starting next wave with 1 HP you start with {0}% HP,Seltsamer Geist lässt einen nicht mit 1 HP starten sondern {0}% HP
