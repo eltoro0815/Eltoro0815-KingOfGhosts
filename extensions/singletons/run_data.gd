@@ -11,10 +11,12 @@ func change_item_weird_ghost():
 func init_effects()->Dictionary:
 	var mod_effects = {
 		"ghost_crown_effect":0,
-		"ghost_cape_effect":0
+		"ghost_cape_effect":0,
+		"ghost_club_blank":0,
 	}
 	var effects = .init_effects()
 	effects.merge(mod_effects)
+	
 	
 	return effects
 

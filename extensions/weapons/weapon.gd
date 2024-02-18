@@ -4,24 +4,58 @@ extends "res://weapons/weapon.gd"
 var image_number = 0
 var kills_counter_hp = 0
 
-const eltoro0815_primary_stat_keys = [
-	"stat_max_hp",
-	"stat_armor",
-	"stat_crit_chance",
-	"stat_luck",
-	"stat_attack_speed",
-	"stat_elemental_damage",
-	"stat_hp_regeneration",
-	"stat_lifesteal",
-	"stat_melee_damage",
-	"stat_percent_damage",
-	"stat_dodge",
-	"stat_engineering",
-	"stat_range",
-	"stat_ranged_damage",
-	"stat_speed",
-	"stat_harvesting"
-]
+
+const stats_distribution_relative_frequencies = {
+	"stat_max_hp" : 80,
+	"stat_armor" : 10,
+	"stat_crit_chance" : 30,
+	"stat_luck" : 100,
+	"stat_attack_speed" : 100,
+	"stat_elemental_damage" : 20,
+	"stat_hp_regeneration" : 10,
+	"stat_lifesteal" : 10,
+	"stat_melee_damage" : 40,
+	"stat_percent_damage" : 160,
+	"stat_dodge" : 60,
+	"stat_engineering" : 20,
+	"stat_range" : 80,
+	"stat_ranged_damage" : 20,
+	"stat_speed" : 10,
+	"stat_harvesting" : 160,
+	"ghost_club_blank" : 240 # chance that you gain nothing
+}
+
+func getDistributionSumAll() :
+	var sum = 0
+	for stat in stats_distribution_relative_frequencies:
+		sum += stats_distribution_relative_frequencies[stat]
+	return sum 
+	
+var isntanceOfRandomNumberGenerator = RandomNumberGenerator.new()
+
+
+func get_random_stat() :
+	isntanceOfRandomNumberGenerator.randomize()
+	
+	var sum_all_stats = getDistributionSumAll()
+	
+	var search_number = isntanceOfRandomNumberGenerator.randi_range(0, sum_all_stats)
+	
+	#print("search_number: " , search_number)
+	
+	var temp_sum = 0
+	for stat in stats_distribution_relative_frequencies:
+		temp_sum += stats_distribution_relative_frequencies[stat]
+		#print("temp_sum:", temp_sum)
+		if search_number <= temp_sum:
+			#print(search_number, " <= ", temp_sum, ": ", stat)
+			return stat
+	
+	return "ghost_club_blank"
+	
+	
+	
+	
 
 var img_ghost_sword_blood = [
 	load("res://mods-unpacked/Eltoro0815-KingOfGhosts/overwrites/eltoro0815_ghost_sword_blood_0_1.png"), #0
@@ -78,19 +112,6 @@ func get_image_number_from_kills(actual_kills, needed_kills) :
 	
 	return map_percentage_to_values(percent_value)
 
-
-
-
-var isntanceOfRandomNumberGenerator = RandomNumberGenerator.new()
-
-
-func get_random_stat() :
-	isntanceOfRandomNumberGenerator.randomize()
-	
-	var random_index = isntanceOfRandomNumberGenerator.randi_range(0, 15)
-	
-	return eltoro0815_primary_stat_keys[random_index]
-
 	
 	
 	
@@ -124,6 +145,10 @@ func on_killed_something(_thing_killed:Node)->void :
 			if effect_value < 1:
 				effect_value = 1
 
+		
+			var rundata_effects = RunData.effects
+
+
 			if nb_enemies_killed_this_wave % effect_value == 0:
 				if effect.custom_key == "ghost_sword_blood":
 					image_number = 0
@@ -131,7 +156,11 @@ func on_killed_something(_thing_killed:Node)->void :
 					update_ghost_sword()
 				
 				if effect.custom_key == "ghost_club_random_stat":
-					RunData.add_stat(get_random_stat(), effect.stat_nb + ghost_cape_effect)
+					var random_stat = get_random_stat()
+					if random_stat == "ghost_club_blank":
+						RunData.add_stat(random_stat, 0)
+					else:
+						RunData.add_stat(random_stat, effect.stat_nb + ghost_cape_effect)
 				else:
 					RunData.add_stat(effect.stat, effect.stat_nb + ghost_cape_effect)
 					
