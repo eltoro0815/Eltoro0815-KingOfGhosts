@@ -4,6 +4,25 @@ extends "res://weapons/weapon.gd"
 var image_number = 0
 var kills_counter_hp = 0
 
+const eltoro0815_primary_stat_keys = [
+	"stat_max_hp",
+	"stat_armor",
+	"stat_crit_chance",
+	"stat_luck",
+	"stat_attack_speed",
+	"stat_elemental_damage",
+	"stat_hp_regeneration",
+	"stat_lifesteal",
+	"stat_melee_damage",
+	"stat_percent_damage",
+	"stat_dodge",
+	"stat_engineering",
+	"stat_range",
+	"stat_ranged_damage",
+	"stat_speed",
+	"stat_harvesting"
+]
+
 var img_ghost_sword_blood = [
 	load("res://mods-unpacked/Eltoro0815-KingOfGhosts/overwrites/eltoro0815_ghost_sword_blood_0_1.png"), #0
 	load("res://mods-unpacked/Eltoro0815-KingOfGhosts/overwrites/eltoro0815_ghost_sword_blood_1_1.png"), #1
@@ -59,14 +78,31 @@ func get_image_number_from_kills(actual_kills, needed_kills) :
 	
 	return map_percentage_to_values(percent_value)
 
+
+
+
+var isntanceOfRandomNumberGenerator = RandomNumberGenerator.new()
+
+
+func get_random_stat() :
+	isntanceOfRandomNumberGenerator.randomize()
+	
+	var random_index = isntanceOfRandomNumberGenerator.randi_range(0, 15)
+	
+	return eltoro0815_primary_stat_keys[random_index]
+
+	
+	
 	
 func on_killed_something(_thing_killed:Node)->void :
 	
 	nb_enemies_killed_this_wave += 1
 
 	var ghost_crown_effect = RunData.effects['ghost_crown_effect']
+	
 
 	var ghost_cape_effect = RunData.effects['ghost_cape_effect']
+	
 
 	for effect in effects:
 
@@ -93,8 +129,12 @@ func on_killed_something(_thing_killed:Node)->void :
 					image_number = 0
 					kills_counter_hp = 0
 					update_ghost_sword()
+				
+				if effect.custom_key == "ghost_club_random_stat":
+					RunData.add_stat(get_random_stat(), effect.stat_nb + ghost_cape_effect)
+				else:
+					RunData.add_stat(effect.stat, effect.stat_nb + ghost_cape_effect)
 					
-				RunData.add_stat(effect.stat, effect.stat_nb + ghost_cape_effect)
 				emit_signal("tracked_value_updated")
 			else :
 				if effect.custom_key == "ghost_sword_blood":

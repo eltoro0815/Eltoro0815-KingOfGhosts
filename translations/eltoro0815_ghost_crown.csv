@@ -1,9 +1,11 @@
 keys,en,de
 EFFECT_GHOST_CROWN,You need 2 less enemies killed to gain a stat with a weapon like the Ghost Axe.,Es werden 2 getöte Gegner weniger benötigt um bspw. 1% Schaden mit der Geisteraxt zu bekommen.
 GHOST_CROWN_NAME,King of Ghosts' Crown,Krone des Geisterkönigs
-EFFECT_GHOST_CAPE,Gain +2 per stat instead of +1 with an item like the Ghost Axe., Erhalte +2 Werte mit Waffen wie der Geisteraxt statt +1.
+EFFECT_GHOST_CAPE,Gain +2 per stat instead of +1 with an item like the Ghost Axe.,Erhalte +2 Werte mit Waffen wie der Geisteraxt statt +1.
 GHOST_CAPE_NAME,King of Ghosts' Cape,Umhang des Geisterkönigs
 WEAPON_GHOST_SWORD,King of Ghosts' Sword,Schwert des Geisterkönigs
 CHARACTER_GHOSTKING_DESC,The King of Ghosts' Descendant,Der Nachfahre des Geisterkönigs
 EFFECT_WEAPON_ITEM_STACK,Deals {0} {1} for every {2} you have [{3}],Verursacht {0} {1} für jedes Exemplar von {2} [{3}]
 DESCENDANT_WEIRD_GHOST_EFFECT,Change of Weird Ghost: Instead of starting next wave with 1 HP you start with {0}% HP,Seltsamer Geist lässt einen nicht mit 1 HP starten sondern {0}% HP
+WEAPON_GHOST_CLUB,Ghost Club,Geisterprügel
+EFFECT_GHOST_CLUB_RANDOM_STAT,{0} random stat for every {2} enemies you kill during a wave with this weapon,"{0} zufälligen Stat für jeden {2}. Gegner, den du während einer Welle mit dieser Waffe tötest"

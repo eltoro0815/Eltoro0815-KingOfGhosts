@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=11 format=2]
+[gd_resource type="Resource" load_steps=13 format=2]
 
 [ext_resource path="res://items/characters/character_data.gd" type="Script" id=1]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/characters/ghostking_descendant/eltoro0815_ghostking_descendant_icon.png" type="Texture" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://weapons/melee/ghost_axe/1/ghost_axe_data.tres" type="Resource" id=7]
 [ext_resource path="res://weapons/ranged/ghost_scepter/1/ghost_scepter_data.tres" type="Resource" id=8]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/characters/ghostking_descendant/ghostking_descendant_eyes_appearance.tres" type="Resource" id=9]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_club/1/ghost_club_data.tres" type="Resource" id=10]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_sword/1/ghost_sword_1_data.tres" type="Resource" id=11]
 [ext_resource path="res://weapons/melee/ghost_flint/1/ghost_flint_data.tres" type="Resource" id=16]
 
 [resource]
@@ -25,4 +27,4 @@ max_nb = -1
 item_appearances = [ ExtResource( 5 ), ExtResource( 9 ) ]
 tags = [  ]
 wanted_tags = [ "tag_ghostking" ]
-starting_weapons = [ ExtResource( 16 ), ExtResource( 7 ), ExtResource( 8 ) ]
+starting_weapons = [ ExtResource( 16 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 11 ) ]
