@@ -4,10 +4,10 @@
 
 [resource]
 script = ExtResource( 1 )
-key = "weapon_ghost_sword_1"
-text_key = "effect_starting_item"
+key = "ghost_descendant_get_weird_ghost"
+text_key = "EFFECT_GHOST_DESCENDANT_GET_WEIRD_GHOST"
 value = 1
-custom_key = "starting_weapon"
+custom_key = ""
 storage_method = 0
 effect_sign = 3
 custom_args = [  ]

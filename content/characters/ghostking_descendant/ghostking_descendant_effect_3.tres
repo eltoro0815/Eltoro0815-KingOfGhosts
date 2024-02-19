@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=2 format=2]
 
-[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/extensions/effects/descendant_weird_ghost_effect.gd" type="Script" id=1]
+[ext_resource path="res://items/global/effect.gd" type="Script" id=1]
 
 [resource]
 script = ExtResource( 1 )
@@ -9,5 +9,5 @@ text_key = "DESCENDANT_WEIRD_GHOST_EFFECT"
 value = 33
 custom_key = ""
 storage_method = 0
-effect_sign = 1
+effect_sign = 3
 custom_args = [  ]

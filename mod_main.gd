@@ -29,8 +29,9 @@ func _init(_modLoader = ModLoader):
 	#ModLoaderMod.install_script_extension(ext_dir + "singletons/utils.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "main.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "weapons/weapon.gd")
+	
 	ModLoaderMod.install_script_extension(ext_dir + "effects/gain_stat_every_killed_enemies_effect.gd")
-	#ModLoaderMod.install_script_extension(ext_dir + "effects/descendant_weird_ghost_effect.gd")
+	ModLoaderMod.install_script_extension(ext_dir + "effects/descendant_weird_ghost_effect.gd")
 	#ModLoaderMod.install_script_extension(ext_dir + "effects/weapon_item_stack_effect.gd")
 
 	ModLoaderMod.install_script_extension(ext_dir + "ui/menus/shop/item_description.gd")
