@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=16 format=2]
+[gd_resource type="Resource" load_steps=17 format=2]
 
 [ext_resource path="res://mods-unpacked/Darkly77-ContentLoader/content_data.gd" type="Script" id=1]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_crown/ghost_crown_data.tres" type="Resource" id=2]
@@ -15,11 +15,12 @@
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_club/4/ghost_club_4_data.tres" type="Resource" id=13]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_club/1/ghost_club_data.tres" type="Resource" id=14]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/weapons/ghost_club/3/ghost_club_3_data.tres" type="Resource" id=15]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/blue_ghost/blue_ghost_data.tres" type="Resource" id=16]
 
 [resource]
 script = ExtResource( 1 )
 characters = [ ExtResource( 11 ) ]
-items = [ ExtResource( 2 ), ExtResource( 3 ) ]
+items = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 16 ) ]
 weapons = [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 14 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 13 ) ]
 weapons_characters = [ [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ] ]
 sets = [  ]
