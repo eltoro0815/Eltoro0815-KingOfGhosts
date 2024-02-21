@@ -5,7 +5,7 @@ func _on_EntitySpawner_player_spawned(player:Player)->void :
 	var effect_hp_start_next_wave = RunData.effects["hp_start_next_wave"]
 	
 	if RunData.effects["hp_start_next_wave"] != 100:
-		if character.my_id == "character_ghostking_desc":
+		if RunData.effects["descendant_weird_ghost_effect"] != 0:
 			RunData.effects["hp_start_next_wave"] = RunData.effects["descendant_weird_ghost_effect"]
 			
 	._on_EntitySpawner_player_spawned(player)
