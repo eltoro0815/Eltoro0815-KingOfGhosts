@@ -9,6 +9,6 @@ EFFECT_WEAPON_ITEM_STACK,Deals {0} {1} for every {2} you have [{3}],Verursacht {
 DESCENDANT_WEIRD_GHOST_EFFECT,Change of Weird Ghost: Instead of starting next wave with [color=red]1[/color] HP you start with {0}% HP (can stack),Seltsamer Geist lässt einen nicht mit [color=red]1[/color] HP starten sondern {0}% HP (can stack)
 WEAPON_GHOST_CLUB,Ghost Club,Geisterprügel
 EFFECT_GHOST_CLUB_RANDOM_STAT,{0} random stat or a blank for every {2} enemies you kill during a wave with this weapon,"{0} zufälligen Stat oder NICHTS für jeden {2}. Gegner, den du während einer Welle mit dieser Waffe tötest"
-EFFECT_GHOST_DESCENDANT_GET_WEIRD_GHOST,Gets [color=#00ff00]1[/color] Weird Ghost reaching Level 10 and [color=#00ff00]2[/color] Weird Ghosts on Level 20 and [color=#00ff00]3[/color] on Level 30,Beim Erreichen von Level 10 schliesst sich [color=#00ff00]1[/color] Seltsamer Geist an. Bei Level 20 schliessen sich [color=#00ff00]2[/color] weitere an. Bei Level 30 nochmals [color=#00ff00]3[/color].
+EFFECT_GHOST_DESCENDANT_GET_WEIRD_GHOST,"Gets [color=#00ff00]1[/color] Weird Ghost reaching Level 1 and 10, [color=#00ff00]2[/color] Weird Ghosts on Level 20 and [color=#00ff00]3[/color] on Level 30, etc.","Beim Erreichen von Level 1 und 10 schliesst sich [color=#00ff00]1[/color] Seltsamer Geist an. Bei Level 20 schliessen sich [color=#00ff00]2[/color] weitere an. Bei Level 30 nochmals [color=#00ff00]3[/color]. etc."
 BLUE_GHOST_NAME,Blue Ghost,Blauer Geist
 RED_GHOST_NAME,Red Ghost,Roter Geist
