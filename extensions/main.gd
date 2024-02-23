@@ -12,8 +12,6 @@ func _on_EntitySpawner_player_spawned(player:Player)->void :
 
 func on_levelled_up()->void :
 	
-	.on_levelled_up()
-	
 	var level = RunData.current_level
 	
 	if level == 1 or level == 10:
@@ -65,7 +63,8 @@ func on_levelled_up()->void :
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(89)
-
+	
+	.on_levelled_up() # we do it after adding the items to get stats imediatelly updated
 
 
 func add_n_weird_ghosts(n: int):
@@ -73,3 +72,5 @@ func add_n_weird_ghosts(n: int):
 	if weird_ghost_item != null:
 		for i in range(0,n): # i gets the values 0,1, ..., n-1 (weird syntax^^)
 			RunData.add_item(weird_ghost_item)
+
+
