@@ -1,9 +1,11 @@
 extends "res://weapons/weapon.gd"
 
 
-var image_number = 0
-var kills_counter_hp = 0
+var image_number_sword = 0
+var kills_counter_hp_sword = 0
 
+var image_number_club = 0
+var kills_counter_club = 0
 
 const stats_distribution_relative_frequencies = {
 	"stat_max_hp" : 80,
@@ -72,13 +74,31 @@ var img_ghost_sword_blood = [
 	load("res://mods-unpacked/Eltoro0815-KingOfGhosts/overwrites/eltoro0815_ghost_sword_blood_5_2.png")  #11
 ]
 
+var img_ghost_club_blood = [
+	load("res://mods-unpacked/Eltoro0815-KingOfGhosts/overwrites/eltoro0815_ghost_club_blood_0.png"), #0
+	load("res://mods-unpacked/Eltoro0815-KingOfGhosts/overwrites/eltoro0815_ghost_club_blood_1.png"), #1
+	load("res://mods-unpacked/Eltoro0815-KingOfGhosts/overwrites/eltoro0815_ghost_club_blood_2.png"), #2
+	load("res://mods-unpacked/Eltoro0815-KingOfGhosts/overwrites/eltoro0815_ghost_club_blood_3.png"), #3
+	load("res://mods-unpacked/Eltoro0815-KingOfGhosts/overwrites/eltoro0815_ghost_club_blood_4.png"), #4
+	load("res://mods-unpacked/Eltoro0815-KingOfGhosts/overwrites/eltoro0815_ghost_club_blood_5.png"), #5
+]
+
+	
 	
 func update_ghost_sword()->void :
 	if weapon_id == "weapon_ghost_sword":
-		sprite.texture = img_ghost_sword_blood[image_number]
+		sprite.texture = img_ghost_sword_blood[image_number_sword]
 	
+	
+	
+func update_ghost_club()->void :
+	if weapon_id == "weapon_ghost_club":
+		sprite.texture = img_ghost_club_blood[image_number_club]
 
-func map_percentage_to_values(percent: float) -> int:
+
+
+
+func map_percentage_to_values_sword(percent: float) -> int:
 	var index = 0
 	if percent >= 0.05:
 		index = 1
@@ -107,10 +127,36 @@ func map_percentage_to_values(percent: float) -> int:
 	return index
 
 
-func get_image_number_from_kills(actual_kills, needed_kills) :
+
+func map_percentage_to_values_club(percent: float) -> int:
+	var index = 0
+	if percent >= 0.1:
+		index = 1
+	if percent >= 0.3:
+		index = 2
+	if percent >= 0.5:
+		index = 3
+	if percent >= 0.7:
+		index = 4
+	if percent >= 0.95:
+		index = 5
+
+	return index
+
+
+
+func get_image_number_from_kills_sword(actual_kills, needed_kills) :
 	var percent_value : float = float(actual_kills)/float(needed_kills)
 	
-	return map_percentage_to_values(percent_value)
+	return map_percentage_to_values_sword(percent_value)
+
+
+
+func get_image_number_from_kills_club(actual_kills, needed_kills) :
+	var percent_value : float = float(actual_kills)/float(needed_kills)
+	
+	return map_percentage_to_values_club(percent_value)
+
 
 	
 	
@@ -131,7 +177,10 @@ func on_killed_something(_thing_killed:Node)->void :
 
 			if weapon_id == "weapon_ghost_sword" :
 				if effect.custom_key == "ghost_sword_blood":
-					kills_counter_hp += 1
+					kills_counter_hp_sword += 1
+			
+			if weapon_id == "weapon_ghost_club" :
+				kills_counter_club += 1
 			
 			var effect_value = 0
 			
@@ -146,14 +195,19 @@ func on_killed_something(_thing_killed:Node)->void :
 				effect_value = 1
 
 		
-			var rundata_effects = RunData.effects
+			
 
 
 			if nb_enemies_killed_this_wave % effect_value == 0:
 				if effect.custom_key == "ghost_sword_blood":
-					image_number = 0
-					kills_counter_hp = 0
+					image_number_sword = 0
+					kills_counter_hp_sword = 0
 					update_ghost_sword()
+				
+				if effect.custom_key == "ghost_club_random_stat":
+					image_number_club = 0
+					kills_counter_club = 0
+					update_ghost_club()
 				
 				if effect.custom_key == "ghost_club_random_stat":
 					var random_stat = get_random_stat()
@@ -167,8 +221,16 @@ func on_killed_something(_thing_killed:Node)->void :
 				emit_signal("tracked_value_updated")
 			else :
 				if effect.custom_key == "ghost_sword_blood":
-					var new_image_number = get_image_number_from_kills(kills_counter_hp, effect_value)
-					if new_image_number != image_number:
-						image_number = new_image_number
+					var new_image_number = get_image_number_from_kills_sword(kills_counter_hp_sword, effect_value)
+					if new_image_number != image_number_sword:
+						image_number_sword = new_image_number
 						update_ghost_sword()
+				
+				if effect.custom_key == "ghost_club_random_stat":
+					var new_image_number = get_image_number_from_kills_club(kills_counter_club, effect_value)
+					if new_image_number != image_number_club:
+						image_number_club = new_image_number
+						update_ghost_club()
+						
+						
 	RunData.emit_stats_updated()
