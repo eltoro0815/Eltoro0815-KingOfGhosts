@@ -174,7 +174,7 @@ func on_killed_something(_thing_killed:Node)->void :
 	for effect in effects:
 
 		if effect is GainStatEveryKilledEnemiesEffect:
-
+				
 			if weapon_id == "weapon_ghost_sword" :
 				if effect.custom_key == "ghost_sword_blood":
 					kills_counter_hp_sword += 1
