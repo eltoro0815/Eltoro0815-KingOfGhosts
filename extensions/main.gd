@@ -14,57 +14,115 @@ func on_levelled_up()->void :
 	
 	var level = RunData.current_level
 	
-	if level == 1 or level == 10:
+	var n = 1
+	var n_minus_1 = 1
+	var n_minus_1_tmp = 1
+	
+	if level == 1 or level == 7:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
-			add_n_weird_ghosts(1)
-				
-	if level == 20:
+			add_n_weird_ghosts(n)
+	
+	n_minus_1_tmp = n_minus_1
+	n_minus_1 = n
+	n = n + n_minus_1_tmp
+		
+	if level == 14:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
-			add_n_weird_ghosts(2)
-				
+			add_n_weird_ghosts(n)
+	
+	n_minus_1_tmp = n_minus_1
+	n_minus_1 = n
+	n = n + n_minus_1_tmp
+		
+	if level == 22:
+		var character = RunData.current_character
+		if character.my_id == "character_ghostking_desc":
+			add_n_weird_ghosts(n)
+	
+	n_minus_1_tmp = n_minus_1
+	n_minus_1 = n
+	n = n + n_minus_1_tmp
+	
 	if level == 30:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
-			add_n_weird_ghosts(3)
+			add_n_weird_ghosts(n)
+	
+	n_minus_1_tmp = n_minus_1
+	n_minus_1 = n
+	n = n + n_minus_1_tmp
 	
 	if level == 40:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
-			add_n_weird_ghosts(5)
-			
+			add_n_weird_ghosts(n)
+		
+	n_minus_1_tmp = n_minus_1
+	n_minus_1 = n
+	n = n + n_minus_1_tmp
+	
 	if level == 50:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
-			add_n_weird_ghosts(8)
-			
+			add_n_weird_ghosts(n)
+		
+	n_minus_1_tmp = n_minus_1
+	n_minus_1 = n
+	n = n + n_minus_1_tmp
+	
 	if level == 60:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
-			add_n_weird_ghosts(13)
-			
+			add_n_weird_ghosts(n)
+	
+	n_minus_1_tmp = n_minus_1
+	n_minus_1 = n
+	n = n + n_minus_1_tmp
+	
 	if level == 70:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
-			add_n_weird_ghosts(21)
-			
+			add_n_weird_ghosts(n)
+	
+	n_minus_1_tmp = n_minus_1
+	n_minus_1 = n
+	n = n + n_minus_1_tmp
+	
 	if level == 80:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
-			add_n_weird_ghosts(34)
-			
+			add_n_weird_ghosts(n)
+	
+	n_minus_1_tmp = n_minus_1
+	n_minus_1 = n
+	n = n + n_minus_1_tmp
+	
 	if level == 90:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
-			add_n_weird_ghosts(55)
-			
+			add_n_weird_ghosts(n)
+	
+	n_minus_1_tmp = n_minus_1
+	n_minus_1 = n
+	n = n + n_minus_1_tmp
+	
 	if level == 100:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
-			add_n_weird_ghosts(89)
+			add_n_weird_ghosts(n)
+	
+	n_minus_1_tmp = n_minus_1
+	n_minus_1 = n
+	n = n + n_minus_1_tmp
+	
+	if level > 100:
+		if level % 10 == 0:
+			add_n_weird_ghosts(n)
 	
 	.on_levelled_up() # we do it after adding the items to get stats imediatelly updated
+
 
 
 func add_n_weird_ghosts(n: int):
