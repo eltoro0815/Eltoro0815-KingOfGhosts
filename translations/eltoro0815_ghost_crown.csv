@@ -12,3 +12,5 @@ EFFECT_GHOST_CLUB_RANDOM_STAT,{0} random stat or a blank for every {2} enemies y
 EFFECT_GHOST_DESCENDANT_GET_WEIRD_GHOST,"Gets [color=#00ff00]1[/color] Weird Ghost reaching Level 1 and 7, [color=#00ff00]2[/color] Weird Ghosts on Level 14 and [color=#00ff00]3[/color] on Level 22, etc.","Beim Erreichen von Level 1 und 7 schliesst sich [color=#00ff00]1[/color] Seltsamer Geist an. Bei Level 14 schliessen sich [color=#00ff00]2[/color] weitere an. Bei Level 22 nochmals [color=#00ff00]3[/color], etc."
 BLUE_GHOST_NAME,Blue Ghost,Blauer Geist
 RED_GHOST_NAME,Red Ghost,Roter Geist
+GOLDEN_GHOST_NAME,Golden Ghost,Goldener Geist
+GOLDEN_GHOST_EFFECT,There are no more [color=red]blanks[/color] on the Ghost Club.,Es gibt keine [color=red]Nieten[/color] mehr mit dem Geisterknüppel.

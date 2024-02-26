@@ -14,7 +14,8 @@ func init_effects()->Dictionary:
 		"ghost_cape_effect":0,
 		"descendant_weird_ghost_effect":0,
 		"ghost_club_blank":0,
-		"ghost_descendant_get_weird_ghost":0
+		"ghost_descendant_get_weird_ghost":0,
+		"golden_ghost_effect":0,
 	}
 	var effects = .init_effects()
 	effects.merge(mod_effects)

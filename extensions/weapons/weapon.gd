@@ -39,6 +39,19 @@ var isntanceOfRandomNumberGenerator = RandomNumberGenerator.new()
 func get_random_stat() :
 	isntanceOfRandomNumberGenerator.randomize()
 	
+	
+	if RunData.effects["golden_ghost_effect"] == 1:
+		stats_distribution_relative_frequencies["ghost_club_blank"] = 0
+		stats_distribution_relative_frequencies["stat_armor"] = 50
+		stats_distribution_relative_frequencies["stat_hp_regeneration"] = 200
+		stats_distribution_relative_frequencies["stat_melee_damage"] = 80
+		stats_distribution_relative_frequencies["stat_ranged_damage"] = 40
+		stats_distribution_relative_frequencies["stat_elemental_damage"] = 40
+		stats_distribution_relative_frequencies["stat_lifesteal"] = 30
+		stats_distribution_relative_frequencies["stat_max_hp"] = 160
+		stats_distribution_relative_frequencies["stat_percent_damage"] = 220
+	
+	
 	var sum_all_stats = getDistributionSumAll()
 	
 	var search_number = isntanceOfRandomNumberGenerator.randi_range(0, sum_all_stats)
@@ -212,7 +225,7 @@ func on_killed_something(_thing_killed:Node)->void :
 				if effect.custom_key == "ghost_club_random_stat":
 					var random_stat = get_random_stat()
 					if random_stat == "ghost_club_blank":
-						RunData.add_stat(random_stat, 0)
+							RunData.add_stat(random_stat, 0)
 					else:
 						RunData.add_stat(random_stat, effect.stat_nb + ghost_cape_effect)
 				else:
