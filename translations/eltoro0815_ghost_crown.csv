@@ -14,5 +14,5 @@ BLUE_GHOST_NAME,Blue Ghost,Blauer Geist
 RED_GHOST_NAME,Red Ghost,Roter Geist
 GOLDEN_GHOST_NAME,Golden Ghost,Goldener Geist
 GOLDEN_GHOST_EFFECT,There are no more [color=red]blanks[/color] on the Ghost Club.,Es gibt keine [color=red]Nieten[/color] mehr mit dem Geisterknüppel.
-GHOST_CLUB_GAINED_STATS_TEXT,\nGained stats\n:,\nErhaltene Werte:\n
+GHOST_CLUB_GAINED_STATS_TEXT,\nGained stats:\n,\nErhaltene Werte:\n
 GHOST_CLUB_BLANKS_TEXT,Blanks:,Nieten:
