@@ -179,8 +179,6 @@ func on_killed_something(_thing_killed:Node)->void :
 	nb_enemies_killed_this_wave += 1
 
 	var ghost_crown_effect = RunData.effects['ghost_crown_effect']
-	ghost_crown_effect = 20
-	
 
 	var ghost_cape_effect = RunData.effects['ghost_cape_effect']
 	
@@ -227,7 +225,7 @@ func on_killed_something(_thing_killed:Node)->void :
 					var random_stat = get_random_stat()
 					
 					var pos = weapon_pos
-					RunData.weapons[pos].tracked_stats_gained[random_stat] += 1
+					RunData.weapons[pos].tracked_stats_gained[random_stat] += effect.stat_nb + ghost_cape_effect
 					
 					
 					if random_stat == "ghost_club_blank":
@@ -238,6 +236,10 @@ func on_killed_something(_thing_killed:Node)->void :
 					RunData.add_stat(effect.stat, effect.stat_nb + ghost_cape_effect)
 					
 				emit_signal("tracked_value_updated")
+				
+				#dirty hack to get the gained stats right if we gain 2 stats
+				if ghost_cape_effect > 0:
+					emit_signal("tracked_value_updated")
 			else :
 				if effect.custom_key == "ghost_sword_blood":
 					var new_image_number = get_image_number_from_kills_sword(kills_counter_hp_sword, effect_value)
