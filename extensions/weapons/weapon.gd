@@ -179,6 +179,7 @@ func on_killed_something(_thing_killed:Node)->void :
 	nb_enemies_killed_this_wave += 1
 
 	var ghost_crown_effect = RunData.effects['ghost_crown_effect']
+	ghost_crown_effect = 20
 	
 
 	var ghost_cape_effect = RunData.effects['ghost_cape_effect']
@@ -224,6 +225,11 @@ func on_killed_something(_thing_killed:Node)->void :
 				
 				if effect.custom_key == "ghost_club_random_stat":
 					var random_stat = get_random_stat()
+					
+					var pos = weapon_pos
+					RunData.weapons[pos].tracked_stats_gained[random_stat] += 1
+					
+					
 					if random_stat == "ghost_club_blank":
 							RunData.add_stat(random_stat, 0)
 					else:
