@@ -26,7 +26,7 @@ func get_effects_text() -> String:
 	
 	
 	var i = 0
-	text += "\nGained stats:\n"
+	text += tr("GHOST_CLUB_GAINED_STATS_TEXT")
 	for stat in tracked_stats_gained:
 		if stat != "ghost_club_blank":
 			text += _vanilla_primary_icon_img(stat)
@@ -41,7 +41,7 @@ func get_effects_text() -> String:
 			if i%4 == 0:
 				text += "\n"
 				
-	text += "Blanks: [color=red]" + String(tracked_stats_gained["ghost_club_blank"]) + "[/color]"
+	text += tr("GHOST_CLUB_BLANKS_TEXT") + " [color=red]" + String(tracked_stats_gained["ghost_club_blank"]) + "[/color]"
 	return text 
 
 func _vanilla_primary_icon_img(_tag_name:String) -> String: # adds the vanilla icon
