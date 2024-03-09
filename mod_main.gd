@@ -42,7 +42,7 @@ func _ready(_modLoader = ModLoader):
 
 	var ContentLoader = get_node("/root/ModLoader/Darkly77-ContentLoader/ContentLoader")
 
-	ContentLoader.load_data(dir + "content_data/king_of_ghosts_items.tres", LOG_NAME)
+	ContentLoader.load_data(dir + "content_data/king_of_ghosts_content_data.tres", LOG_NAME)
 
 	#var mod_loader_mod = ModLoaderMod.new()
 	#mod_loader_mod.call_deferred("install_script_extension", ext_dir + "global/entity_spawner.gd")
