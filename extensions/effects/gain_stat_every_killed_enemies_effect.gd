@@ -6,6 +6,8 @@ func get_args()->Array:
 	var ghost_cape_effect = RunData.effects['ghost_cape_effect']
 	
 	var adjusted_value = value - ghost_crown_effect
+	if custom_key == "ghost_sword_blood":
+		adjusted_value = value - 2*ghost_crown_effect
 	
 	if adjusted_value < 1:
 		adjusted_value = 1
