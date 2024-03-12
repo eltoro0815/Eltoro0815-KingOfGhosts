@@ -18,7 +18,7 @@ func on_levelled_up()->void :
 	var n_minus_1 = 1
 	var n_minus_1_tmp = 1
 	
-	if level == 1 or level == 7:
+	if level == 1 or level == 3:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
@@ -26,7 +26,15 @@ func on_levelled_up()->void :
 	n_minus_1_tmp = n_minus_1
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
-		
+	
+	if level == 7:
+		var character = RunData.current_character
+		if character.my_id == "character_ghostking_desc":
+			add_n_weird_ghosts(n)
+	
+	n_minus_1_tmp = n_minus_1
+	n_minus_1 = n
+	n = n + n_minus_1_tmp
 	if level == 14:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
