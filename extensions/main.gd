@@ -53,7 +53,7 @@ func on_levelled_up()->void :
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
 	
-	if level == 30:
+	if level == 33:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
@@ -62,16 +62,7 @@ func on_levelled_up()->void :
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
 	
-	if level == 40:
-		var character = RunData.current_character
-		if character.my_id == "character_ghostking_desc":
-			add_n_weird_ghosts(n)
-		
-	n_minus_1_tmp = n_minus_1
-	n_minus_1 = n
-	n = n + n_minus_1_tmp
-	
-	if level == 50:
+	if level == 44:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
@@ -80,7 +71,16 @@ func on_levelled_up()->void :
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
 	
-	if level == 60:
+	if level == 55:
+		var character = RunData.current_character
+		if character.my_id == "character_ghostking_desc":
+			add_n_weird_ghosts(n)
+		
+	n_minus_1_tmp = n_minus_1
+	n_minus_1 = n
+	n = n + n_minus_1_tmp
+	
+	if level == 66:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
@@ -89,7 +89,7 @@ func on_levelled_up()->void :
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
 	
-	if level == 70:
+	if level == 77:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
@@ -98,7 +98,7 @@ func on_levelled_up()->void :
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
 	
-	if level == 80:
+	if level == 88:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
@@ -107,7 +107,7 @@ func on_levelled_up()->void :
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
 	
-	if level == 90:
+	if level == 99:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
@@ -116,20 +116,12 @@ func on_levelled_up()->void :
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
 	
-	if level == 100:
-		var character = RunData.current_character
-		if character.my_id == "character_ghostking_desc":
-			add_n_weird_ghosts(n)
 	
-	n_minus_1_tmp = n_minus_1
-	n_minus_1 = n
-	n = n + n_minus_1_tmp
-	
-	if level > 100:
+	if level > 99:
 		if level % 10 == 0:
 			add_n_weird_ghosts(n)
 	
-	.on_levelled_up() # we do it after adding the items to get stats imediatelly updated
+	.on_levelled_up() # we do it after adding the items to get stats immediatelly updated
 
 
 
