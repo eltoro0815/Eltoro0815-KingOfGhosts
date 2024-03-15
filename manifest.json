@@ -1,8 +1,8 @@
 {
 	"name": "KingOfGhosts",
 	"namespace": "Eltoro0815",
-	"version_number": "1.2.0",
-	"description": "Items to gain faster stats with weapons by killing enemies. New Ghost Sword.",
+	"version_number": "2.0.0",
+	"description": "The Legacy of the Ghost King",
 	"website_url": "",
 	"dependencies": [
 		"Darkly77-ContentLoader"
@@ -16,8 +16,8 @@
 			"authors": [
 				"Eltoro0815"
 			],
-			"compatible_mod_loader_version": ["6.0.0"],
-			"compatible_game_version": ["1.0.0.3"],
+			"compatible_mod_loader_version": ["6.2.0"],
+			"compatible_game_version": ["1.0.1.3"],
 			"config_schema": {
 				"title":"KingOfGhosts Settings",
 				"description":"Settings for KingOfGhosts mod by Eltoro0815",
