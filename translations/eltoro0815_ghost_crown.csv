@@ -20,3 +20,4 @@ GHOST_QUEEN_NECKLACE_NAME,Ghost Queen's Necklace,Collier der Geisterkönigin
 EFFECT_GAIN_HP_PER_SECOND,Cancels the effect of getting up to {0} damage per second from items like the Hand of Blood ({2} left),Hebt den Effekt auf bis zu {0} Schaden pro Sekunde von Items wie der Blutigen Hand zu erhalten (noch {2} übrig)
 GHOST_KING_NECKLACE_NAME,Ghost King's Necklace,Kette des Geisterkönigs
 GHOST_KING_MOTHER_IN_LAW_TIARA_NAME,Ghost King's Mother in Law's Tiara,Diadem der Schwiegermutter des Geisterkönigs
+HIT_PROTECTION_MULTIPLE_HITS,Nullifies the damage of {0} hits taken every wave,Hebt den erlittenen Schaden von {0} Treffern pro Welle auf.
