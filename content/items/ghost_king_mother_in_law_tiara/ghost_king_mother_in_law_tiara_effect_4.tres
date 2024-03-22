@@ -6,7 +6,7 @@
 script = ExtResource( 1 )
 key = "hit_protection"
 text_key = "effect_hit_protection"
-value = 1
+value = 2
 custom_key = ""
 storage_method = 0
 effect_sign = 3
