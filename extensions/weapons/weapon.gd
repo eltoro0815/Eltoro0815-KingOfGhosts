@@ -24,22 +24,22 @@ const stats_distribution_relative_frequencies = {
 	"stat_ranged_damage" : 20,
 	"stat_speed" : 10,
 	"stat_harvesting" : 160,
-	"ghost_club_blank" : 240 # chance that you gain nothing
+	"ghost_club_blank" : 120 # chance that you gain nothing
 }
 
 func getDistributionSumAll() :
 	var sum = 0
 	for stat in stats_distribution_relative_frequencies:
 		sum += stats_distribution_relative_frequencies[stat]
-	return sum 
-	
+	return sum
+
 var isntanceOfRandomNumberGenerator = RandomNumberGenerator.new()
 
 
 func get_random_stat() :
 	isntanceOfRandomNumberGenerator.randomize()
-	
-	
+
+
 	if RunData.effects["golden_ghost_effect"] == 1:
 		stats_distribution_relative_frequencies["ghost_club_blank"] = 0
 		stats_distribution_relative_frequencies["stat_armor"] = 50
@@ -50,14 +50,14 @@ func get_random_stat() :
 		stats_distribution_relative_frequencies["stat_lifesteal"] = 30
 		stats_distribution_relative_frequencies["stat_max_hp"] = 160
 		stats_distribution_relative_frequencies["stat_percent_damage"] = 220
-	
-	
+
+
 	var sum_all_stats = getDistributionSumAll()
-	
+
 	var search_number = isntanceOfRandomNumberGenerator.randi_range(0, sum_all_stats)
-	
+
 	#print("search_number: " , search_number)
-	
+
 	var temp_sum = 0
 	for stat in stats_distribution_relative_frequencies:
 		temp_sum += stats_distribution_relative_frequencies[stat]
@@ -65,12 +65,12 @@ func get_random_stat() :
 		if search_number <= temp_sum:
 			#print(search_number, " <= ", temp_sum, ": ", stat)
 			return stat
-	
+
 	return "ghost_club_blank"
-	
-	
-	
-	
+
+
+
+
 
 var img_ghost_sword_blood = [
 	load("res://mods-unpacked/Eltoro0815-KingOfGhosts/overwrites/eltoro0815_ghost_sword_blood_0_1.png"), #0
@@ -96,14 +96,14 @@ var img_ghost_club_blood = [
 	load("res://mods-unpacked/Eltoro0815-KingOfGhosts/overwrites/eltoro0815_ghost_club_blood_5.png"), #5
 ]
 
-	
-	
+
+
 func update_ghost_sword()->void :
 	if weapon_id == "weapon_ghost_sword":
 		sprite.texture = img_ghost_sword_blood[image_number_sword]
-	
-	
-	
+
+
+
 func update_ghost_club()->void :
 	if weapon_id == "weapon_ghost_club":
 		sprite.texture = img_ghost_club_blood[image_number_club]
@@ -135,8 +135,8 @@ func map_percentage_to_values_sword(percent: float) -> int:
 		index = 10
 	if percent >= 0.95:
 		index = 11
-	
-	
+
+
 	return index
 
 
@@ -160,54 +160,54 @@ func map_percentage_to_values_club(percent: float) -> int:
 
 func get_image_number_from_kills_sword(actual_kills, needed_kills) :
 	var percent_value : float = float(actual_kills)/float(needed_kills)
-	
+
 	return map_percentage_to_values_sword(percent_value)
 
 
 
 func get_image_number_from_kills_club(actual_kills, needed_kills) :
 	var percent_value : float = float(actual_kills)/float(needed_kills)
-	
+
 	return map_percentage_to_values_club(percent_value)
 
 
-	
-	
-	
+
+
+
 func on_killed_something(_thing_killed:Node)->void :
-	
+
 	nb_enemies_killed_this_wave += 1
 
 	var ghost_crown_effect = RunData.effects['ghost_crown_effect']
 
 	var ghost_cape_effect = RunData.effects['ghost_cape_effect']
-	
+
 
 	for effect in effects:
 
 		if effect is GainStatEveryKilledEnemiesEffect:
-				
+
 			if weapon_id == "weapon_ghost_sword" :
 				if effect.custom_key == "ghost_sword_blood":
 					kills_counter_hp_sword += 1
-			
+
 			if weapon_id == "weapon_ghost_club" :
 				kills_counter_club += 1
-			
+
 			var effect_value = 0
-			
+
 			if effect.custom_key == "ghost_sword_gain_hp":
 				# double the ghost_crown_effect on HP effect to keep the ratio %damage to maxHP to 1:2
 				effect_value = int(effect.value - (2*ghost_crown_effect))
 			else:
 				effect_value = int(effect.value - ghost_crown_effect)
-			
+
 
 			if effect_value < 1:
 				effect_value = 1
 
-		
-			
+
+
 
 
 			if nb_enemies_killed_this_wave % effect_value == 0:
@@ -215,28 +215,28 @@ func on_killed_something(_thing_killed:Node)->void :
 					image_number_sword = 0
 					kills_counter_hp_sword = 0
 					update_ghost_sword()
-				
+
 				if effect.custom_key == "ghost_club_random_stat":
 					image_number_club = 0
 					kills_counter_club = 0
 					update_ghost_club()
-				
+
 				if effect.custom_key == "ghost_club_random_stat":
 					var random_stat = get_random_stat()
-					
+
 					var pos = weapon_pos
 					RunData.weapons[pos].tracked_stats_gained[random_stat] += effect.stat_nb + ghost_cape_effect
-					
-					
+
+
 					if random_stat == "ghost_club_blank":
 							RunData.add_stat(random_stat, 0)
 					else:
 						RunData.add_stat(random_stat, effect.stat_nb + ghost_cape_effect)
 				else:
 					RunData.add_stat(effect.stat, effect.stat_nb + ghost_cape_effect)
-					
+
 				emit_signal("tracked_value_updated")
-				
+
 				#dirty hack to get the gained stats right if we gain 2 stats
 				if ghost_cape_effect > 0:
 					emit_signal("tracked_value_updated")
@@ -246,12 +246,12 @@ func on_killed_something(_thing_killed:Node)->void :
 					if new_image_number != image_number_sword:
 						image_number_sword = new_image_number
 						update_ghost_sword()
-				
+
 				if effect.custom_key == "ghost_club_random_stat":
 					var new_image_number = get_image_number_from_kills_club(kills_counter_club, effect_value)
 					if new_image_number != image_number_club:
 						image_number_club = new_image_number
 						update_ghost_club()
-						
-						
+
+
 	RunData.emit_stats_updated()
