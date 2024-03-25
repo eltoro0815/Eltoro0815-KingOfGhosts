@@ -36,6 +36,7 @@ func _init(_modLoader = ModLoader):
 	#ModLoaderMod.install_script_extension(ext_dir + "effects/weapon_item_stack_effect.gd")
 
 	ModLoaderMod.install_script_extension(ext_dir + "ui/menus/shop/item_description.gd")
+	ModLoaderMod.install_script_extension(ext_dir + "ui/menus/shop/shop.gd")
 
 
 func _ready(_modLoader = ModLoader):
