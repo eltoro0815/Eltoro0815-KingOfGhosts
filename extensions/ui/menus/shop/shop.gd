@@ -1,6 +1,6 @@
 extends "res://ui/menus/shop/shop.gd"
 
-
+# we det weapons by position to be synchronous with RunData.remove_weapon()
 func get_ghost_club_stats(weapon:WeaponData, pos:int=0)->Dictionary:
 	var tracked_stats_gained := {
 		"stat_max_hp" : 0,
@@ -65,8 +65,7 @@ func on_item_combine_button_pressed(weapon_data:WeaponData, is_upgrade:bool = fa
 	
 	if weapon_data.weapon_id == "weapon_ghost_club":
 		if is_upgrade:
-			var first_tracked_stats_gained = get_ghost_club_stats(weapon_data, 0)
-			tracked_stats_gained = first_tracked_stats_gained
+			tracked_stats_gained = weapon_data.tracked_stats_gained
 		
 		if not is_upgrade:
 		
