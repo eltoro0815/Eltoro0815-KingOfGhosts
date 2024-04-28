@@ -119,7 +119,9 @@ func on_levelled_up()->void :
 	
 	if level > 99:
 		if level % 10 == 0:
-			add_n_weird_ghosts(n)
+			var character = RunData.current_character
+			if character.my_id == "character_ghostking_desc":
+				add_n_weird_ghosts(n)
 	
 	.on_levelled_up() # we do it after adding the items to get stats immediatelly updated
 
