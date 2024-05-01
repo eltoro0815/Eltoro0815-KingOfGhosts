@@ -1,10 +1,12 @@
-[gd_resource type="Resource" load_steps=6 format=2]
+[gd_resource type="Resource" load_steps=8 format=2]
 
 [ext_resource path="res://items/global/item_data.gd" type="Script" id=1]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/blue_ghost/blue_ghost_effect_1.tres" type="Resource" id=2]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/blue_ghost/eltoro0815_blue_ghost_icon.png" type="Texture" id=3]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/blue_ghost/blue_ghost_effect_2.tres" type="Resource" id=4]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/blue_ghost/blue_ghost_effect_3.tres" type="Resource" id=5]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/blue_ghost/blue_ghost_effect_4.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/blue_ghost/blue_ghost_effect_5.tres" type="Resource" id=7]
 
 [resource]
 script = ExtResource( 1 )
@@ -14,7 +16,7 @@ icon = ExtResource( 3 )
 name = "BLUE_GHOST_NAME"
 tier = 1
 value = 50
-effects = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ) ]
+effects = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
 tracking_text = ""
 max_nb = 1
 item_appearances = [  ]

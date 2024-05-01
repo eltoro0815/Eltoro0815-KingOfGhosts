@@ -23,4 +23,10 @@ func init_effects()->Dictionary:
 	
 	return effects
 
+func add_wanted_tag_to_character(tag:String) -> void :
+	if tag == null or tag == "" :
+		return
 	
+	if current_character != null :
+		if not current_character.wanted_tags.has(tag):
+			current_character.wanted_tags.push_back(tag)
