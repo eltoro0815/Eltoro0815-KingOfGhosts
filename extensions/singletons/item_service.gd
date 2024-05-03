@@ -128,7 +128,7 @@ func get_rand_item_for_wave(wave:int, type:int, excluded_items:Array = [], owned
 	if item_tier == Tier.LEGENDARY and type == TierData.WEAPONS:
 		var chance_only_legendary_weapons = 0.3
 		var rand_only_legendary_weapons = randf()
-		print(rand_only_legendary_weapons)
+
 		if (rand_only_legendary_weapons <= chance_only_legendary_weapons):
 
 			for item in pool:
@@ -150,7 +150,6 @@ func get_rand_item_for_wave(wave:int, type:int, excluded_items:Array = [], owned
 
 
 	for item in items_to_remove:
-		print(item.my_id)
 		pool.erase(item)
 
 
