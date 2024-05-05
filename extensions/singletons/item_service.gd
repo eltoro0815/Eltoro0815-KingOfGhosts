@@ -11,7 +11,7 @@ func get_rand_item_for_wave(wave:int, type:int, excluded_items:Array = [], owned
 	# we replace it with a random Legendary Weapon
 	if type == TierData.WEAPONS and _new_item.tier == Tier.LEGENDARY:
 	
-		var chance_change_to_legendary_weapon = 0.34
+		var chance_change_to_legendary_weapon = 0.50
 		var rand_chance_change_to_legendary_weapon = randf()
 
 		if (rand_chance_change_to_legendary_weapon <= chance_change_to_legendary_weapon):
