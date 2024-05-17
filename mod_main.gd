@@ -26,7 +26,7 @@ func _init(_modLoader = ModLoader):
 	#ModLoaderMod.install_script_extension(ext_dir + "singletons/progress_data.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "singletons/run_data.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "singletons/weapon_service.gd")
-	ModLoaderMod.install_script_extension(ext_dir + "singletons/item_service.gd")
+	
 	#ModLoaderMod.install_script_extension(ext_dir + "singletons/utils.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "main.gd")
 	ModLoaderMod.install_script_extension(ext_dir + "weapons/weapon.gd")
