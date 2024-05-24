@@ -7,9 +7,9 @@ func get_value(wave:int, base_value:int, affected_by_items_price_stat:bool = tru
 	# if you have the rainbow ghost the price for a weapon is capped by the rainbow_ghost_effect
 	if is_weapon:
 		var rainbow_ghost_effect = RunData.effects['rainbow_ghost_effect']
-		if rainbow_ghost_effect > 0:
-			if value > rainbow_ghost_effect:
-				value = rainbow_ghost_effect
+		if int(rainbow_ghost_effect) > 0:
+			if int(value) > int(rainbow_ghost_effect):
+				value = int(rainbow_ghost_effect)
 
 	return value
 
