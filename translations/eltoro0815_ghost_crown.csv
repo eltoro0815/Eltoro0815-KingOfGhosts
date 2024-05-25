@@ -23,4 +23,4 @@ GHOST_KING_MOTHER_IN_LAW_TIARA_NAME,Ghost King's Mother in Law's Tiara,Diadem de
 HIT_PROTECTION_MULTIPLE_HITS,Nullifies the damage of {0} hits taken every wave,Hebt den erlittenen Schaden von {0} Treffern pro Welle auf.
 EFFECT_ADD_WANTED_TAG,Adds wanted tag to your character: {0},Fügt den 'wanted tag' zum Charakter hinzu: {0}
 RAINBOW_GHOST_NAME,Rainbow Ghost,Regenbogengeist
-RAINBOW_GHOST_EFFECT,Caps the weapon price to {0},Begrenzt den Waffenpreis auf {0}
+RAINBOW_GHOST_EFFECT,Caps the weapon price at {0},Begrenzt den Waffenpreis auf {0}
