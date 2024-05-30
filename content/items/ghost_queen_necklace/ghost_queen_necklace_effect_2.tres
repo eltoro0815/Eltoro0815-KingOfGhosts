@@ -19,5 +19,5 @@ custom_key = ""
 storage_method = 0
 effect_sign = 0
 custom_args = [ SubResource( 1 ) ]
-nb_stat_scaled = 10
+nb_stat_scaled = 1
 stat_scaled = "item_weird_ghost"
