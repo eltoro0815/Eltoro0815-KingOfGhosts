@@ -3,126 +3,126 @@ extends "res://main.gd"
 func _on_EntitySpawner_player_spawned(player:Player)->void :
 	var character = RunData.current_character
 	var effect_hp_start_next_wave = RunData.effects["hp_start_next_wave"]
-	
+
 	if RunData.effects["hp_start_next_wave"] != 100:
 		if RunData.effects["descendant_weird_ghost_effect"] != 0:
 			RunData.effects["hp_start_next_wave"] = RunData.effects["descendant_weird_ghost_effect"]
-			
+
 	._on_EntitySpawner_player_spawned(player)
 
 func on_levelled_up()->void :
-	
+
 	var level = RunData.current_level
-	
+
 	var n = 1
 	var n_minus_1 = 1
 	var n_minus_1_tmp = 1
-	
-	if level == 1 or level == 3:
+
+	if level == 1 or level == 5:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
-	
+
 	n_minus_1_tmp = n_minus_1
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
-	
-	if level == 7:
+
+	if level == 10:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
-	
+
 	n_minus_1_tmp = n_minus_1
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
-	if level == 14:
+	if level == 20:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
-	
+
 	n_minus_1_tmp = n_minus_1
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
-		
-	if level == 22:
+
+	if level == 30:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
-	
+
 	n_minus_1_tmp = n_minus_1
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
-	
-	if level == 33:
+
+	if level == 40:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
-	
+
 	n_minus_1_tmp = n_minus_1
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
-	
-	if level == 44:
+
+	if level == 50:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
-		
+
 	n_minus_1_tmp = n_minus_1
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
-	
-	if level == 55:
+
+	if level == 60:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
-		
+
 	n_minus_1_tmp = n_minus_1
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
-	
-	if level == 66:
+
+	if level == 70:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
-	
+
 	n_minus_1_tmp = n_minus_1
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
-	
-	if level == 77:
+
+	if level == 80:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
-	
+
 	n_minus_1_tmp = n_minus_1
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
-	
-	if level == 88:
+
+	if level == 90:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
-	
+
 	n_minus_1_tmp = n_minus_1
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
-	
-	if level == 99:
+
+	if level == 100:
 		var character = RunData.current_character
 		if character.my_id == "character_ghostking_desc":
 			add_n_weird_ghosts(n)
-	
+
 	n_minus_1_tmp = n_minus_1
 	n_minus_1 = n
 	n = n + n_minus_1_tmp
-	
-	
-	if level > 99:
+
+
+	if level > 100:
 		if level % 10 == 0:
 			var character = RunData.current_character
 			if character.my_id == "character_ghostking_desc":
 				add_n_weird_ghosts(n)
-	
+
 	.on_levelled_up() # we do it after adding the items to get stats immediatelly updated
 
 
