@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=10 format=2]
+[gd_resource type="Resource" load_steps=11 format=2]
 
 [ext_resource path="res://items/global/item_data.gd" type="Script" id=1]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_queen_necklace/ghost_queen_necklace_effect_1.tres" type="Resource" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_queen_necklace/ghost_queen_necklace_effect_5.tres" type="Resource" id=7]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_queen_necklace/ghost_queen_necklace_effect_6.tres" type="Resource" id=8]
 [ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_queen_necklace/ghost_queen_necklace_effect_7.tres" type="Resource" id=9]
+[ext_resource path="res://mods-unpacked/Eltoro0815-KingOfGhosts/content/items/ghost_queen_necklace/ghost_queen_necklace_effect_8.tres" type="Resource" id=10]
 
 [resource]
 script = ExtResource( 1 )
@@ -18,7 +19,7 @@ icon = ExtResource( 3 )
 name = "GHOST_QUEEN_NECKLACE_NAME"
 tier = 2
 value = 70
-effects = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
+effects = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ]
 tracking_text = ""
 max_nb = 1
 item_appearances = [  ]
